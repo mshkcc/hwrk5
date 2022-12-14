@@ -1,15 +1,14 @@
-﻿int[] array = new int[3];
-int n = 0;
+﻿int[] array = new int[5];
+int sum = 0;
 
 for (int i = 0; i < array.Length; i++)
-    array[i] = new Random().Next(100, 1000);
+    array[i] = new Random().Next(10);
 
-for (int i = 0; i < array.Length; i++)
-    if (array[i] % 2 == 0)
-        n++;
+for (int i = 1; i < array.Length; i += 2)
+    sum += array[i];
 
 for (int i = 0; i < array.Length; i++)
 
     Console.Write($"{array[i]} ");
 
-Console.Write($"{n}");
+Console.Write($"Сумма: {sum}");
